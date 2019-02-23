@@ -1,0 +1,229 @@
+<krpano >
+	<!-- 1 -->
+	<style name="hotspot_style1"  
+		  url="%SWFPATH%/hot/1.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />	
+	<!-- 2 -->
+	<style name="hotspot_style2"  
+		  url="%SWFPATH%/hot/2.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />		
+	
+	<!-- 3 -->
+	<style name="hotspot_style3"  
+		  url="%SWFPATH%/hot/3.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 4 -->
+	<style name="hotspot_style4"  
+		  url="%SWFPATH%/hot/4.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+		   
+	<!-- 5 -->
+	<style name="hotspot_style5"  
+		  url="%SWFPATH%/hot/5.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+    
+   <!-- 6 -->
+	<style name="hotspot_style6"  
+		  url="%SWFPATH%/hot/6.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 7 -->
+	<style name="hotspot_style7"  
+		  url="%SWFPATH%/hot/7.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 8 -->
+	<style name="hotspot_style8"  
+		  url="%SWFPATH%/hot/4.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 9 -->
+	<style name="hotspot_style9"  
+		  url="%SWFPATH%/hot/9.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 10 -->
+	<style name="hotspot_style10"  
+		  url="%SWFPATH%/hot/10.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 11 -->
+	<style name="hotspot_style11"  
+		  url="%SWFPATH%/hot/11.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 12 -->
+	<style name="hotspot_style12"  
+		  url="%SWFPATH%/hot/12.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />
+
+    <!-- 13 -->
+	<style name="hotspot_style13"  
+		  url="%SWFPATH%/hot/4.png" 
+		  crop="0|0|128|128" 
+		  framewidth="128" 
+		  frameheight="128" 
+		  frame="0" 
+		  lastframe="24" 
+		  scale="0.5" 
+	      onclick="skin_hotspotstyle_click();"
+	      onloaded="hotspot_animate();if(distorted,add_tooltip2(get(linkedscene),1),add_all_the_time_tooltip(get(linkedscene),1));"
+	       />	
+		   
+<!-- 热点样式 属性 -->
+ 	<action name="hotspot_animate">
+		inc(frame,1,get(lastframe),0);
+		mul(ypos,frame,frameheight);
+		txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+		delayedcall(0.02, if(loaded, hotspot_animate()) );
+	</action>
+	
+	<!-- 1.198版本热点点击事件 -->
+	<action name="skin_hotspotstyle_click" scope="local">
+		if(caller.linkedscene,
+			copy(hs_linkedscene, caller.linkedscene);
+			if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
+			set(caller.enabled, false);
+			skin_hidetooltips();
+			tween(caller.depth|caller.alpha|caller.oy|caller.rx, 4000|0.0|-50|-60, 0.5, default,
+				skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+				if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
+				skin_updatescroll();
+			);
+		);
+	</action>
+	
+	
+<!-- 箭头上添加文字的部分  开始-->
+	<action name="add_all_the_time_tooltip">
+    txtadd(tooltipname, 'tooltip_', get(name));
+    addplugin(get(tooltipname));
+    txtadd(plugin[get(tooltipname)].parent, 'hotspot[', get(name), ']');
+    set(plugin[get(tooltipname)].url,'%SWFPATH%/plugins/textfield.swf');
+    set(plugin[get(tooltipname)].align,top);
+    set(plugin[get(tooltipname)].edge,bottom);
+    set(plugin[get(tooltipname)].x,0);
+    set(plugin[get(tooltipname)].y,20);
+    set(plugin[get(tooltipname)].autowidth,true);
+    set(plugin[get(tooltipname)].autoheight,true);
+    set(plugin[get(tooltipname)].background,true);
+	set(plugin[get(tooltipname)].backgroundcolor,0x000000);
+	set(plugin[get(tooltipname)].roundedge,5);
+	set(plugin[get(tooltipname)].backgroundalpha,0.5);
+    set(plugin[get(tooltipname)].border,true);
+	set(plugin[get(tooltipname)].glow,4);
+	set(plugin[get(tooltipname)].glowcolor,0xFFFFFF);
+	if(device.mobile == false,
+	    set(plugin[get(tooltipname)].css,'text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:10px;');
+		,	
+		set(plugin[get(tooltipname)].css,'text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:14px;');
+			  );
+    set(plugin[get(tooltipname)].textshadow,1);
+    set(plugin[get(tooltipname)].textshadowrange,6.0);
+    set(plugin[get(tooltipname)].textshadowangle,90);
+    if(text == '' OR text === null,
+	    copy(plugin[get(tooltipname)].html,scene[get(linkedscene)].title),
+	    copy(plugin[get(tooltipname)].html,text)
+	    );
+    set(plugin[get(tooltipname)].enabled,false);
+</action>
+<!-- 场景热点样式 结束 -->	
+
+</krpano>

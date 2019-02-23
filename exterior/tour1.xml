@@ -1,0 +1,584 @@
+﻿<krpano version="1.19" title="Virtual Tour">
+	<include url="skin/vtourskin.xml" />
+	<include url="%SWFPATH%/hot/hot.xml" />
+	<include url="loadingpercenttext.xml" />
+	<include url="loadingbar.xml" />
+	<!-- 完成项目制作 请手上删除 以下内容  KRPANOCMS提示您 KRpanocms全景管理系统无需学习任何代码知识  咨询与购买请联系QQ:2529737999 邢工 -->
+	<plugin name="vtoureditor"  url="%SWFPATH%/plugins/vtoureditor.swf" keep="true" zorder="100"/>
+	<plugin name="editor"  url="%SWFPATH%/plugins/editor.swf" keep="true" zorder="100"/>
+	<plugin name="options" url="%SWFPATH%/plugins/options.swf" keep="true" zorder="100" />
+	<!-- 完成项目制作 请手上删除 以上内容 -->
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		closetitle();
+		if(startactions !== null, startactions() );</action>
+	<layer name="bbb" keep="true" type="container" bgcolor="0x000000" bgalpha="0.5" align="righttop" x="-100" y="0" width="48" height="48" >
+		<layer name="db_titlel2" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="0" y="0"
+		html="鸟瞰"
+		css="font-family:微软雅黑; font-size:17px; color:#ffffff;"
+		autowidth="true" autoheight="auto"
+		paddingright="20" roundedge="0"
+		background="false"
+		onclick="skin_loadscene('scene_000');"
+		backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+		/>
+	</layer>
+	<action name="closetitle">tween(layer[bbb].x,-100,0.5););</action>
+	<action name="opentitle">tween(layer[bbb].x,0,0.5););</action>
+	<layer name="ccc" keep="true" type="container" bgcolor="0x000000" bgalpha="0.5" align="righttop" x="-100" y="0" width="48" height="48" >
+		<layer name="db_titley2" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="0" y="0"
+		html="离开"
+		css="font-family:微软雅黑; font-size:17px; color:#ffffff;"
+		autowidth="true" autoheight="auto"
+		paddingright="20" roundedge="0"
+		background="false"
+		onclick="openurl('../nav.html',_self);"
+		backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+		/>
+	</layer>
+	<action name="closetitle1">tween(layer[ccc].x,-100,0.5););</action>
+	<action name="opentitle1">tween(layer[ccc].x,0,0.5););</action>
+	<plugin name="soundinterface"
+	url.flash="%SWFPATH%/plugins/soundinterface.swf"
+	url.html5="%SWFPATH%/plugins/soundinterface.js"
+	rootpath=""
+	preload="true"
+	keep="true"
+	/>
+	<events onremovepano="stopsound(bggsnd1);stopsound(bggsnd2);stopsound(bggsnd3);stopsound(bggsnd4);stopsound(bggsnd5);stopsound(bggsnd6);stopsound(bggsnd7);stopsound(bggsnd8);stopsound(bggsnd9);stopsound(bggsnd10);stopsound(bggsnd11);"
+	onnewpano="automusic()"
+	/>
+	<scene name="scene_012" title="环保式雨水口" onstart="opentitle(); closetitle1(); playsound(bggsnd2, '%SWFPATH%/audio/hbsysk.mp3', 1);" havevrimage="true" thumburl="panos/thumb/012.jpg" lat="" lng="" heading="">
+		<view hlookat="158.450" vlookat="12.915" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/012.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4149" tiledimageheight="4149">
+				<cube url="panos/012/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2075" tiledimageheight="2075">
+				<cube url="panos/012/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1038" tiledimageheight="1038">
+				<cube url="panos/012/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="519" tiledimageheight="519">
+				<cube url="panos/012/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/012/pano_%s.jpg" />
+		</image>
+		
+		<layer name="cpyl" keep="true" type="container" bgcapture="true" bgcolor="0x000000" zorder="3"  bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closeimg1()">
+			<layer name="img1" type="image" parent="layer[cpyl]" url="skin/20190201171653.png" keep="true" width="300" height="407"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0" />
+		</layer>
+		<layer name="cpzc" keep="true" type="container" bgcapture="true" zorder="3"  bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closeimg2()">
+			<layer name="img2" type="image" parent="layer[cpzc]" url="skin/20190201171714b.png" keep="true" width="300" height="277"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0" />
+		</layer>
+		<layer name="tanchuk2" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext2()">
+			<layer name="ui_anniu1" type="image" parent="layer[tanchuk2]" url="skin/bj.png" keep="true" width="272" height="340"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="snd2" url="skin/bof.png" parent="layer[ui_anniu1]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd2);switch(layer[ui_title1].visible)"
+				/>
+				<layer name="ui_title1" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniu1]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_title4" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_title3" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="30"
+				html="截污式环保雨水口，其经过优化设计，在小雨时能够净化初期雨水，大雨时不影响雨水的顺畅排放，具有良好的承重性能、高效的雨水净化能力、安装维护便捷等特点，主要应用于建筑与小区、城市道路和广场。"
+				css="font-family:微软雅黑; font-size:16px; line-height:24px; color:#303030;"
+				width="232" height="180"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="db_titler3" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="bottom" x="-58" y="60"
+				html="产品功能和原理"
+				css="font-family:微软雅黑; font-size:12px; line-height:32px; text-align: center; border-radius:5px; border:1px solid #91B2D9; color:#4A90E2;"
+				width="106" height="36"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" onclick="openimg1()" handcursor="false" enabled="true"
+				/>
+				<layer name="db_titler4" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="bottom" x="58" y="60"
+				html="产品组成"
+				css="font-family:微软雅黑; font-size:12px; line-height:32px; text-align: center; border-radius:5px; border:1px solid #91B2D9; color:#4A90E2;"
+				width="106" height="36"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" onclick="openimg2()" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_close1" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniu1]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext2()" />
+			</layer>
+		</layer>
+		<hotspot name="spot1" style="hotspot_style6" ath="155.745" atv="27.727" text="环保式雨水口" onclick="opentext2()" />
+		<hotspot name="spot2" style="hotspot_style1" ath="174.602" atv="13.392" linkedscene="scene_004" />
+		<hotspot name="spot3" style="hotspot_style1" ath="65.660" atv="7.487" linkedscene="scene_003" />
+	</scene>
+	<scene name="scene_000" title="鸟瞰" onstart="closetitle(); opentitle1();" havevrimage="true" thumburl="panos/thumb/000.jpg" lat="30.89808806" lng="121.92185111" heading="0.0">
+		<view hlookat="-401.494" vlookat="69.715" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/000.jpg" />
+		<image type="CUBE" prealign="0|0.0|0" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="7323" tiledimageheight="7323">
+				<cube url="panos/000/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3663" tiledimageheight="3663">
+				<cube url="panos/000/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1875" tiledimageheight="1875">
+				<cube url="panos/000/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="938" tiledimageheight="938">
+				<cube url="panos/000/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image prealign="0|0.0|0" if="webvr.isenabled">
+			<cube url="panos/vr/000/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style6" ath="32.178" atv="72.000" linkedscene="scene_003" />
+		<hotspot name="spot2" style="hotspot_style6" ath="-51.400" atv="79.600" text="旱溪技术展示区" onclick="skin_loadscene('scene_006');" />
+		<hotspot name="spot3" style="hotspot_style6" ath="12.523" atv="86.609" linkedscene="scene_005" />
+		<hotspot name="spot4" style="hotspot_style6" ath="-76.347" atv="85.860" linkedscene="scene_011" />
+		<hotspot name="spot5" style="hotspot_style6" ath="-98.125" atv="79.185" linkedscene="scene_007" />
+		<hotspot name="spot8" style="hotspot_style6" ath="-95.865" atv="75.071" linkedscene="scene_008" />
+		<hotspot name="spot7" style="hotspot_style6" ath="-133.109" atv="78.035" linkedscene="scene_010" />
+		<hotspot name="spot9" style="hotspot_style1" ath="-42.837" atv="58.029" text="入口" onclick="openurl('../vtour/tour.html',_self);" />
+
+	</scene>
+	<scene name="scene_003" title="活动与休息区" onstart="opentitle();closetitle1();" havevrimage="true" thumburl="panos/thumb/003.jpg" lat="" lng="" heading="">
+		<view hlookat="318.564" vlookat="-4.117" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/003.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/003/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/003/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/003/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/003/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/003/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style3" ath="-141.572" atv="6.675" onclick="skin_loadscene('scene_012');" text="前往旱溪技术展示区" />
+
+	</scene>
+	<action name="closetext2">delayedcall(0.0,set(layer[tanchuk2].visible,false;);stopsound(bggsnd2); );</action>
+	<action name="opentext2">delayedcall(0.0,set(layer[tanchuk2].visible,true);stopsound(bggsnd2); );</action>
+	
+	<action name="closeimg1">delayedcall(0.0,set(layer[cpyl].visible,false;););</action>
+	<action name="openimg1">delayedcall(0.0,set(layer[cpyl].visible,true); );</action>
+	<action name="closeimg2">delayedcall(0.0,set(layer[cpzc].visible,false;););</action>
+	<action name="openimg2">delayedcall(0.0,set(layer[cpzc].visible,true););</action>
+	
+	<scene name="scene_004" title="前往旱溪技术展示区" onstart="opentitle(); closetitle1();" havevrimage="true" thumburl="panos/thumb/004.jpg" lat="" lng="" heading="">
+		<view hlookat="80.700" vlookat="36.219" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/004.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4153" tiledimageheight="4153">
+				<cube url="panos/004/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2077" tiledimageheight="2077">
+				<cube url="panos/004/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1040" tiledimageheight="1040">
+				<cube url="panos/004/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="521" tiledimageheight="521">
+				<cube url="panos/004/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/004/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style2" ath="77.307" atv="9.849" text="旱溪技术展示区" onclick="skin_loadscene('scene_006');" />
+		<hotspot name="spot2" style="hotspot_style1" ath="-93.673" atv="15.820" linkedscene="scene_012" />
+	</scene>
+	<scene name="scene_005" title="预留海绵城市材料与技术展示区" onstart="opentitle(); closetitle1();" havevrimage="true" thumburl="panos/thumb/006.jpg" lat="" lng="" heading="">
+		<view hlookat="-100.197" vlookat="8.377" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/006.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/006/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/006/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/006/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/006/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/006/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style1" ath="131.320" atv="29.555" linkedscene="scene_011" />
+		<hotspot name="spot2" style="hotspot_style1" ath="171.740" atv="16.837" linkedscene="scene_006" />
+	</scene>
+	<scene name="scene_006" title="旱溪技术展示区" onstart="opentitle(); closetitle1(); playsound(bggsnd1, '%SWFPATH%/audio/1.mp3', 1);" havevrimage="true" thumburl="panos/thumb/005.jpg" lat="" lng="" heading="">
+		<view hlookat="213.202" vlookat="24.127" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/005.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/005/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/005/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/005/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/005/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/005/pano_%s.jpg" />
+		</image>
+		<layer name="tanchuk1" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext()">
+			<layer name="ui_anniu" type="image" parent="layer[tanchuk1]" url="skin/bj.png" keep="true" width="272" height="284"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="snd" url="skin/bof.png" parent="layer[ui_anniu]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd1);switch(layer[ui_title].visible)"
+				/>
+				<layer name="ui_title" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniu]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_title" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_title1" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+				html="海绵设施“旱溪”，可以用来下渗、漫流，引导雨水流向。遇到突发暴雨天气时，它又具有蓄水功能，形成特色的水溪景观。"
+				css="font-family:微软雅黑; font-size:16px; color:#303030; line-height:24px;"
+				width="232" height="160"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_close" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniu]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext()" />
+			</layer>
+		</layer>
+		<hotspot name="spot1" style="hotspot_style1" ath="144.306" atv="6.394" linkedscene="scene_007" />
+		<hotspot name="spot2" style="hotspot_style6" ath="-157.443" enabled="true" atv="13.688" text="旱溪技术展示区"  onclick="opentext();" />
+		<hotspot name="spot3" style="hotspot_style1" ath="-116.167" atv="14.552"  text="前往活动与休息区" onclick="skin_loadscene('scene_004');" />
+		<hotspot name="spot4" style="hotspot_style1" ath="60.680" atv="11.528"  linkedscene="scene_005" />
+	</scene>
+	<action name="closetext">delayedcall(0.0,set(layer[tanchuk1].visible,false;);stopsound(bggsnd1); );</action>
+	<action name="opentext">delayedcall(0.0,set(layer[tanchuk1].visible,true);stopsound(bggsnd1); );</action>
+	<scene name="scene_007" title="海绵城市材料与技术展示区" onstart="opentitle(); closetitle1();" havevrimage="true" thumburl="panos/thumb/007.jpg" lat="" lng="" heading="">
+		<view hlookat="-132.300" vlookat="10.714" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/007.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4149" tiledimageheight="4149">
+				<cube url="panos/007/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2075" tiledimageheight="2075">
+				<cube url="panos/007/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1038" tiledimageheight="1038">
+				<cube url="panos/007/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="519" tiledimageheight="519">
+				<cube url="panos/007/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/007/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style1" ath="-131.455" atv="6.751" linkedscene="scene_009" />
+		<hotspot name="spot2" style="hotspot_style1" ath="42.398" atv="17.046" linkedscene="scene_011" />
+
+	</scene>
+	<action name="closetext7">delayedcall(0.0,set(layer[tanchuk7].visible,false;);stopsound(bggsnd7);stopsound(bggsnd8););</action>
+	<action name="opentext7">delayedcall(0.0,set(layer[tanchuk7].visible,true);stopsound(bggsnd7);stopsound(bggsnd8););</action>
+	<action name="closetext8">delayedcall(0.0,set(layer[tanchuk8].visible,false;);stopsound(bggsnd8);stopsound(bggsnd7););</action>
+	<action name="opentext8">delayedcall(0.0,set(layer[tanchuk8].visible,true);stopsound(bggsnd7););</action>
+	<scene name="scene_008" title="蓄存渗水-跷跷板" onstart="opentitle(); closetitle1(); playsound(bggsnd7, '%SWFPATH%/audio/chuchunss0.mp3', 1);" havevrimage="true" thumburl="panos/thumb/008.jpg" lat="" lng="" heading="">
+		<view hlookat="187.792" vlookat="43.235" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/008.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4153" tiledimageheight="4153">
+				<cube url="panos/008/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2077" tiledimageheight="2077">
+				<cube url="panos/008/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1040" tiledimageheight="1040">
+				<cube url="panos/008/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="521" tiledimageheight="521">
+				<cube url="panos/008/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/008/pano_%s.jpg" />
+		</image>
+		<layer name="tanchuk7" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext7()">
+			<layer name="ui_anniub4" type="image" parent="layer[tanchuk7]" url="skin/bj.png" keep="true" width="272" height="234"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="sndb5" url="skin/bof.png" parent="layer[ui_anniub4]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd7);switch(layer[ui_titleb4].visible)"
+				/>
+				<layer name="ui_titleb4" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniub4]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_titleb10" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_titleb9" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="30"
+				html="跷跷板互动区域通过跷跷板上下摇动启动水磊把以往蓄存的雨水引流入海绵渗水材料，让大家可以感受到地面对水的吸收，有趣直观。"
+				css="font-family:微软雅黑; font-size:16px; line-height:24px; color:#303030;"
+				width="232" height="120"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_closeb4" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniub4]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext7()" />
+			</layer>
+		</layer>
+		<layer name="tanchuk8" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext8()">
+			<layer name="ui_anniuc4" type="image" parent="layer[tanchuk8]" url="skin/bj.png" keep="true" width="272" height="520"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<layer name="ui_anniuk" type="image" parent="layer[tanchuk8]" url="audio/hnt.png" keep="true" width="160" height="140"  zorder="2" align="top" x="" y="0" scale="1.0" altscale="1.0" />
+				<plugin name="sndc5" url="skin/bof.png" parent="layer[ui_anniuc4]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd8);switch(layer[ui_titlec4].visible)"
+				/>
+				<layer name="ui_titlec4" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniuc4]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_titlec10" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_titlec9" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="140"
+				html="又称多空隙水泥混凝土，系针对原城市硬化道路的路面缺陷，开发制成的一种能让雨水深入地下有效补充地下水；雨天可有效消除积水，冬天路面不结冰，提高安全性能；同时是保护自然维护生态平衡、吸音降噪、滞洪调蓄、环境城市热岛效应的优良铺装材料。除此之外，彩色透水水泥混凝土路面拥有多种系列色彩搭配，配合设计上的需求，针对不同环境和个性要求的装饰风格进行整体性铺装施工，是传统铺装和一般透水砖不能实现的特殊铺装材料，满足景观绿道的功能性和装饰性。适用于：停车位、健康步道、人行道、非机动车道等专用车道。"
+				css="font-family:微软雅黑; font-size:13px; line-height:20px; color:#303030;"
+				width="232" height="380"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_closec4" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniuc4]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext8()" />
+			</layer>
+		</layer>
+		<hotspot name="spot1" style="hotspot_style6" ath="166.917" atv="21.997" onclick="opentext7()" text="蓄存渗水-跷跷板" />
+		<hotspot name="spot2" style="hotspot_style1" ath="11.416" atv="14.892" linkedscene="scene_011" />
+		<hotspot name="spot3" style="hotspot_style6" ath="-59.385" atv="34.531" onclick="opentext8(); playsound(bggsnd8, '%SWFPATH%/audio/caisst.mp3', 1);" text="彩色生态透水水泥混凝土" />
+
+	</scene>
+	<action name="closetext4">delayedcall(0.0,set(layer[tanchuk4].visible,false;);stopsound(bggsnd4);stopsound(bggsnd5));</action>
+	<action name="opentext4">delayedcall(0.0,set(layer[tanchuk4].visible,true);stopsound(bggsnd4);stopsound(bggsnd5) );</action>
+	<action name="closetext5">delayedcall(0.0,set(layer[tanchuk5].visible,false;);stopsound(bggsnd4);stopsound(bggsnd5) );</action>
+	<action name="opentext5">delayedcall(0.0,set(layer[tanchuk5].visible,true);stopsound(bggsnd4);stopsound(bggsnd5) );</action>
+	<scene name="scene_009" title="息壤生态多孔纤维棉" onstart="opentitle(); closetitle1(); playsound(bggsnd4, '%SWFPATH%/audio/xrst.mp3', 1);" havevrimage="true" thumburl="panos/thumb/009.jpg" lat="" lng="" heading="">
+
+		<view hlookat="59.094" vlookat="23.227" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/009.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/009/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/009/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/009/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/009/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/009/pano_%s.jpg" />
+		</image>
+		<layer name="tanchuk4" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext4()">
+			<layer name="ui_anniu3" type="image" parent="layer[tanchuk4]" url="skin/bj.png" keep="true" width="272" height="500"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="snd4" url="skin/bof.png" parent="layer[ui_anniu3]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd4);switch(layer[ui_title3].visible)"
+				/>
+				<layer name="ui_title3" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniu3]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_title7" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_title8" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="20"
+				html="息壤生态多孔纤维棉是一种无毒、无污染、无致癌物的生态环保纤维材料，采用生态海绵细胞技术，孔隙率高、毛细力低、埋设在土壤中，如同“海绵”一样，能够起到雨时蓄水，旱时补水的功能。[br] 息壤多孔纤维棉能够充分利用雨水资源补给土壤植被，提高雨水利用率，支持植物生长，是一款集渗透、调蓄、保水、排水、净化为一体的生态环保友好型产品。[br] 本产品适用于道路侧分带、建筑周边绿地、屋顶绿化、公园广场、足球场、生态停车场、河流生态护坡等区域。"
+				css="font-family:微软雅黑; font-size:16px; line-height:24px; color:#303030;"
+				width="232" height="460"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_close3" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniu3]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext4()" />
+			</layer>
+		</layer>
+		<layer name="tanchuk5" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext4()">
+			<layer name="ui_anniu4" type="image" parent="layer[tanchuk5]" url="skin/bj.png" keep="true" width="272" height="534"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="snd5" url="skin/bof.png" parent="layer[ui_anniu4]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd5);switch(layer[ui_title4].visible)"
+				/>
+				<layer name="ui_title4" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniu4]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_title10" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_title9" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="20"
+				html="1.雨水通过雨落水管断接进入自排污型调蓄雨水设施。[br]2雨水通过有机营养层；营养层是植物生长的基础，是整个景观衔接的保证，同时也是整个雨水滞留器运行的基础。[br]3.雨水通过有机介质层；有机介质层是整个雨水滞留器的核心部分，必须满足设计要求的渗透系数，能初步处理碳、氮、磷、硫元素等有害物质，保证植物生长的基础条件，并且达到设计要求的雨水滞留时间[br]4.雨水通过过渡层；过渡层采用50%两次过筛的粗河砂及无纺布，起到二次过滤、阻根的作用，无纺布下需有支撑层，保证上层回填料的结构稳定。回填后需用水密法使其结构稳定后方可进行下道工序施工[br]5.雨水通过保水层；底部全部真空，连接出水口处添加一个处理器，加强雨水二次净化作用[br]6.超过设施调蓄容积的雨水通过雨水箅子由溢流管排入市政雨水管网"
+				css="font-family:微软雅黑; font-size:13px; line-height:20px; color:#303030;"
+				width="232" height="480"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_close4" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniu3]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext5()" />
+			</layer>
+		</layer>
+		<hotspot name="spot1" style="hotspot_style6" ath="59.972" atv="10.096" text="息壤生态多孔纤维棉" onclick="opentext4()" />
+		<hotspot name="spot2" style="hotspot_style3" ath="11.014" atv="7.450" linkedscene="scene_010" />
+		<hotspot name="spot3" style="hotspot_style2" ath="-155.274" atv="11.574" linkedscene="scene_008" />
+		<hotspot name="spot4" style="hotspot_style6" ath="170.131" atv="16.321" text="雨水花园滞留系统展示" onclick="opentext5(); playsound(bggsnd5, '%SWFPATH%/audio/yshyzl.mp3', 1);" />
+		<hotspot name="spot5" style="hotspot_style1" ath="-63.682" atv="14.121" linkedscene="scene_011" />
+
+	</scene>
+	<action name="closetext6">delayedcall(0.0,set(layer[tanchuk6].visible,false;);stopsound(bggsnd6););</action>
+	<action name="opentext6">delayedcall(0.0,set(layer[tanchuk6].visible,true);stopsound(bggsnd6););</action>
+	<scene name="scene_010" title="回收雨水再利用-自行车观众体验区" onstart="opentitle(); closetitle1(); playsound(bggsnd6, '%SWFPATH%/audio/hsyshui.mp3', 1);" havevrimage="true" thumburl="panos/thumb/010.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-44.023" vlookat="23.817" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/010.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4153" tiledimageheight="4153">
+				<cube url="panos/010/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2077" tiledimageheight="2077">
+				<cube url="panos/010/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1040" tiledimageheight="1040">
+				<cube url="panos/010/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="521" tiledimageheight="521">
+				<cube url="panos/010/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/010/pano_%s.jpg" />
+		</image>
+		<layer name="tanchuk6" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext6()">
+			<layer name="ui_anniua4" type="image" parent="layer[tanchuk6]" url="skin/bj.png" keep="true" width="272" height="200"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="snda5" url="skin/bof.png" parent="layer[ui_anniua4]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd6);switch(layer[ui_titlea4].visible)"
+				/>
+				<layer name="ui_titlea4" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniua4]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_titlea10" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_titlea9" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="30"
+				html="自行车收集净化，通过自行车运转的动力，将净化的雨水资源喷射到花草上，再利用水资源于养护，寓教于乐。"
+				css="font-family:微软雅黑; font-size:16px; line-height:24px; color:#303030;"
+				width="232" height="140"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_closea4" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniua3]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext6()" />
+			</layer>
+		</layer>
+		
+		<hotspot name="spot1" style="hotspot_style6" ath="-47.963" atv="29.197" onclick="opentext6()" text="回收雨水再利用-自行车观众体验区" />
+		<hotspot name="spot2" style="hotspot_style1" ath="158.917" atv="13.842" linkedscene="scene_009" />
+
+	</scene>
+	<action name="closetext3">delayedcall(0.0,set(layer[tanchuk3].visible,false;);stopsound(bggsnd3); );</action>
+	<action name="opentext3">delayedcall(0.0,set(layer[tanchuk3].visible,true);stopsound(bggsnd3); );</action>
+	<scene name="scene_011" title="模拟下雨，水循环艺术树雕塑" onstart="opentitle(); closetitle1(); playsound(bggsnd3, '%SWFPATH%/audio/sxhyssds.mp3', 1);" havevrimage="true" thumburl="panos/thumb/011.jpg" lat="" lng="" heading="">
+		<view hlookat="-15.932" vlookat="-0.910" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="auto" />
+		<preview url="panos/preview/011.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/011/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/011/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/011/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/011/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/011/pano_%s.jpg" />
+		</image>
+		<layer name="tanchuk3" keep="true" type="container" bgcapture="true" bgcolor="0x000000" bgalpha="0.5" visible="false" align="center" x="" y="" width="100%" height="100%" enabled="true" onclick="closetext3()">
+			<layer name="ui_anniu2" type="image" parent="layer[tanchuk3]" url="skin/bj.png" keep="true" width="272" height="424"  zorder="2" align="center" x="" y="-60" scale="1.0" altscale="1.0">
+				<plugin name="snd3" url="skin/bof.png" parent="layer[ui_anniu2]" width="33" height="33"  zorder="1" align="bottom" x="110" y="14" alpha="1.0" scale="1.0"
+				onloaded="if(ismobile,set(scale,1));"
+				onclick="pausesoundtoggle(bggsnd3);switch(layer[ui_title2].visible)"
+				/>
+				<layer name="ui_title2" type="image" url="skin/sm.png" keep="true" parent="layer[ui_anniu2]" width="88" height="22" zorder="1" align="bottom" x="48" y="20" scale="1.0" altscale="1.0">
+					<layer name="db_title6" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="-5" y="-2"
+					html="点击收听语音"
+					css="font-family:微软雅黑; font-size:12px; color:#ffffff;"
+					autowidth="true" autoheight="auto" roundedge="0"
+					background="false"
+					backgroundcolor="0x000000"  backgroundalpha="0.5" handcursor="false" enabled="true"
+					/>
+				</layer>
+				<layer name="db_title5" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="top" x="0" y="20"
+				html="现在看到的是室外展示区的树形雕塑展项，树形雕塑和雨水花园相结合，是海绵城市工程技术的集中展示，树形雕塑人工模拟降雨过程，雨水花园模拟雨水自然净化过程，雨水从树形雕塑降落到雨水花园，先通过雨水花园收集，再经过植物和结构层的净化处理，最后储存在下部的调蓄池，并通过降雨系统实现雨水重复利用。雨水花园侧面设置部分透明断面，通过透明断面可以直接看到雨水花园内部构造，从而更加深刻了解雨水净化过程。"
+				css="font-family:微软雅黑; font-size:16px; color:#303030; line-height:24px;"
+				width="232" height="360"
+				roundedge="0"
+				background="false"
+				backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+				/>
+				<layer name="ui_btn_close2" type="image" url="skin/guanbi.png" keep="true" parent="layer[ui_anniu2]" width="33" height="33"  zorder="1" align="bottom" x="0" y="-50" scale="1.0" altscale="1.0" onclick="closetext3()" />
+			</layer>
+		</layer>
+		<hotspot name="spot1" style="hotspot_style6" ath="-20.883" atv="-18.983" onclick="opentext3()" text="水循环艺术树雕塑" />
+		<hotspot name="spot2" style="hotspot_style1" ath="61.847" atv="8.707" linkedscene="scene_007" />
+		<hotspot name="spot3" style="hotspot_style1" ath="110.495" atv="9.528" linkedscene="scene_008" />
+		<hotspot name="spot4" style="hotspot_style1" ath="-113.798" atv="14.355" linkedscene="scene_006" />
+
+	</scene>
+</krpano>

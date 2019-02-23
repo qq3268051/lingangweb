@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="上海临港海绵城市展示中心" />
+    <meta name="description" content="上海临港海绵城市展示中心" />
+    <title>互动数字沙盘</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/commin.css">
+    <link rel="stylesheet" href="./css/zsStyle.css">
+    <style type="text/css">
+    	/*#sandtablemap area{outline: none;}*/
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a class="goback" href="./nav.html"><img src="./images/arrow_l.png" alt=""></a>
+        </div>
+        <div class="sandtable-main">
+        	<img src="images/sandtable.png" alt="" usemap="#sandtablemap" />
+        	<map name="sandtablemap" id="sandtablemap">
+			  <area shape="poly" coords="62,344,33,364,10,363,8,332,42,330,54,324" href="details.html?id=3&mapid=11" />
+			  <area shape="poly" coords="137,84,224,184,233,192,262,182,263,19,232,16,196,44,137,45" href="details.html?id=3&mapid=4" />
+			  <area shape="poly" coords="24,292,5,297,9,328,41,329,50,323" href="details.html?id=3&mapid=10" />
+			  <area shape="poly" coords="27,290,65,335,104,291,89,274,97,261,96,251,119,193,134,116,135,107,133,46,123,37,118,92,112,173,87,220" href="details.html?id=3&mapid=9" />
+			  <area shape="poly" coords="136,91,138,111,120,199,111,225,204,226,221,218,232,193" href="details.html?id=3&mapid=5" />
+			  <area shape="poly" coords="219,225,201,233,161,231,115,232,107,243,101,261,95,274,105,278,107,284,123,268,143,254,159,263,163,279,141,306,149,317,156,329,160,331,181,314,205,290,217,268,229,258" href="details.html?id=3&mapid=6" />
+			  <area shape="poly" coords="145,260,154,278,134,306,130,295,120,285,114,284,129,265,138,260" href="details.html?id=3&mapid=7" />
+			  <area shape="poly" coords="233,264,167,338,194,371,323,308,288,265,261,275" href="details.html?id=3&mapid=1" />
+			  <area shape="circle" coords="261,229,37" href="details.html?id=3&mapid=8" />
+			  <area shape="poly" coords="292,197,351,133,358,152,355,272,331,304,292,259,301,229" href="details.html?id=3&mapid=2" />
+			  <area shape="poly" coords="266,21,268,179,278,187,289,192,349,125,313,18" href="details.html?id=3&mapid=3" />
+			</map>
+        	<h2>C互动数字沙盘</h2>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		
+	    	if(window.orientation == 0 || window.orientation == 180) {
+	    		var s = window.screen.width/375;
+	    	}else {
+				var s = window.screen.width/375;
+			}
+	    	var arr = [];
+	    	$("#sandtablemap area").each(function(i,ele){
+	    		var a = $(ele).attr('coords');
+	    		a = a.split(",")
+	    		arr.push(a)
+	    	});
+	    	
+	    	$(arr).each(function(i,ele){
+	    		var k = "";
+	    		$(ele).each(function(index,e){
+	    			k+= e*s+",";
+	    		})
+	    		k = k.substring(0,k.length-1);
+	    		$("#sandtablemap area").eq(i).attr('coords',k);
+	    	});
+	    	var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+			window.addEventListener(evt, function() {
+				if(window.orientation == 0 || window.orientation == 180) {
+						var s = window.screen.width/375;
+					}else {
+						var s = window.screen.width/375;
+				}
+				$(arr).each(function(i,ele){
+		    		var k = "";
+		    		$(ele).each(function(index,e){
+		    			k+= e*s+",";
+		    		})
+		    		k = k.substring(0,k.length-1);
+		    		$("#sandtablemap area").eq(i).attr('coords',k);
+		    	});
+			    
+			}, true);
+   		});
+    	
+    
+    	
+    </script>
+</body>
+
+</html>

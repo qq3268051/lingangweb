@@ -1,0 +1,248 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"title": "海绵之源",
+			"data": [
+				{
+					"title": "全球海绵城市应用",
+					"imgurl": "images/1-1.png",
+					"audio": "audio/qqhmcsyy.mp3",
+					"detail": "针对城市水生态环境所面临问题的复杂性和目标的多元化，发达国家也在不断调整和完善城市规划、建设和管理的理念，在总结和实践的基础上,应运而生了美国的低影响开发（LID）和绿色基础设施（GI）、澳大利亚的水敏性城市设计（WSUD）、英国的可持续排水系统（SUDS）、德国的分散式雨水管理系统（DRSM）、新加坡的ABC水计划等。尽管各国在提法上不同，但做法上是殊途同归，都是通过灰绿设施的结合，从控制雨水径流入手，综合施策来解决上述问题。<br /> 【德国：高效集水，平衡生态。德国城市地下管网的发达程度与排污能力处于世界领先地位。德国城市都拥有现代化的排水设施，不仅能够高效排水排污，还能起到平衡城市生态系统的功能。<br />   瑞士：雨水工程，民众参与。如今在瑞士，许多建筑物和住宅外部都装有专用雨水流通管道，内部建有蓄水池，雨水经过处理后使用。一般用户除饮用之外的其他生活用水，用这个雨水利用系统基本可以解决。 <br /> 新加坡：疏导有方，标准严格。新加坡作为一个雨量充沛的热带岛国，却鲜有城市内涝的情况发生。首先，预先规划城市排水系统。其次，加强雨水疏导，建立大型蓄水池。第三，建立严格的地面建筑排水标准。<br /> 美国：强化设计，加快改建。美国大多数城市秉承传统的水利设施设计理念：在郊外储存雨水，利用水渠送到市区，污水通过地下沟渠排走。"
+				}, {
+					"title": "国际发展理念转变",
+					"imgurl": "images/1-2.png",
+					"audio": "audio/gjfzlnzb.mp3",
+					"detail": "在海绵城市建设方面，初期只是简单控制雨水不在地面堆积；后面是按照要求净化雨水；之后在暴雨初期就控制住雨水堆积，同时将截留的雨水净化；第四步就是将净化后的雨水利用起来，也就是现在所提倡的可持续性雨水管理。"
+				}, {
+					"title": "国际发展理念转变",
+					"imgurl": "images/1-3.png",
+					"audio": "audio/gjfzlnzb.mp3",
+					"detail": "在海绵城市建设方面，初期只是简单控制雨水不在地面堆积；后面是按照要求净化雨水；之后在暴雨初期就控制住雨水堆积，同时将截留的雨水净化；第四步就是将净化后的雨水利用起来，也就是现在所提倡的可持续性雨水管理。"
+				}, {
+					"id": 1,
+					"title": "海绵城市",
+					"imgurl": "images/1-4.png",
+					"audio": "audio/hmcs.mp3",
+					"detail": "海绵城市是新一代城市雨洪管理概念的统称，立足于要建立一个“城市之下、未来之上”的生态格局，其出发点在于统筹管控城市雨水、导流、保存与再利用。如果将城市建在“海绵”上，人们就可以利用“海绵”适应天气变化，下雨时由“海绵”自主吸水、蓄水、渗水、净水，需要时将蓄存在“海绵”里的水取出并加以利用，实现自然积存、自然渗透、自然净化的城市发展方式。"
+				}
+			]
+		}, {
+			"id": 3,
+			"title": "海绵之城",
+			"data": [
+				{
+					"id": 1,
+					"title": "1分区",
+					"imgurl": [
+						"images/area/area1_img1.jpg",
+						"images/area/area1_img2.jpg",
+						"images/area/area1_img3.jpg",
+						"images/area/area1_img4.jpg",
+						"images/area/area1_img5.jpg",
+						"images/area/area1_img6.jpg"
+					],
+					"audio": "audio/hmcs1.mp3",
+					"detail": "本片区包含春花秋色、科创城及主城区南部靠近海塘的生态保留区域，主要示范生态廊道雨水滞蓄净化"
+				}, {
+					"id": 2,
+					"title": "2分区",
+					"imgurl": [
+						"images/area/area2_img1.jpg",
+						"images/area/area2_img2.jpg",
+						"images/area/area2_img3.jpg"
+					],
+					"audio": "audio/hmcs2.mp3",
+					"detail": "本片区主要作为远景城市空间拓展预留，主要示范围垦区生态保护与修复利用"
+				}, {
+					"id": 3,
+					"title": "3分区",
+					"imgurl": [
+						"images/area/area3_img1.jpg",
+						"images/area/area3_img2.jpg",
+						"images/area/area3_img3.jpg",
+						"images/area/area3_img4.jpg"
+					],
+					"audio": "audio/hmcs3.mp3",
+					"detail": "本片区近期主要进行骨架路网及骨架水系建设，主要示范海绵型生态河道建设和海绵型道路建设"
+				}, {
+					"id": 4,
+					"title": "4分区",
+					"imgurl": [
+						"images/area/area4_img1.jpg",
+						"images/area/area4_img2.jpg"
+					],
+					"audio": "audio/hmcs4.mp3",
+					"detail": "本片区近期主要进行骨架路网、骨架水系及星空之镜的建设，主要示范海绵型道路、海绵型生态河道以及生态廊道雨水滞蓄净化建设"
+				}, {
+					"id": 5,
+					"title": "5分区",
+					"imgurl": [
+						"images/area/area5_img1.jpg",
+						"images/area/area5_img2.jpg",
+						"images/area/area5_img3.jpg",
+						"images/area/area5_img4.jpg"
+					],
+					"audio": "audio/hmcs5.mp3",
+					"detail": "本片区包括楔形绿地、申港社区、上海电力学院以及部分二环带公园，主要示范已建城区海绵工程建设和生态廊道雨水滞蓄净化"
+				}, {
+					"id": 6,
+					"title": "6分区",
+					"imgurl": [
+						"images/area/area6_img1.jpg",
+						"images/area/area6_img2.jpg",
+						"images/area/area6_img3.jpg",
+						"images/area/area6_img4.jpg"
+					],
+					"audio": "audio/hmcs6.mp3",
+					"detail": "本片区包括申港社区、大学城、黄日港及两侧绿地、二环带公园和环湖商业街区，主要示范已建城区海绵工程建设和生态廊道雨水滞蓄净化"
+				}, {
+					"id": 7,
+					"title": "7分区",
+					"imgurl": [
+						"images/area/area7_img1.jpg",
+						"images/area/area7_img2.jpg",
+						"images/area/area7_img3.jpg",
+						"images/area/area7_img4.jpg"
+					],
+					"audio": "audio/hmcs7.mp3",
+					"detail": "本片区为海洋大学，主要示范大学园区大型公建区科教基地海绵工程建设模式"
+				}, {
+					"id": 8,
+					"title": "8分区",
+					"imgurl": [
+						"images/area/area8_img1.jpg",
+						"images/area/area8_img2.jpg",
+						"images/area/area8_img3.jpg",
+						"images/area/area8_img4.jpg"
+					],
+					"audio": "audio/hmcs8.mp3",
+					"detail": "本片区包括环湖80米景观带以及西岛和北岛，作为保障滴水湖水质的最后生态屏障"
+				}, {
+					"id": 9,
+					"title": "9分区",
+					"imgurl": [
+						"images/area/area9_img1.jpg",
+						"images/area/area9_img2.jpg",
+						"images/area/area9_img3.jpg"
+					],
+					"audio": "audio/hmcs9.mp3",
+					"detail": "本片区包括临港国际物流园区及临港森林一期，主要示范产业园区低影响开发改造以及河道综合治理"
+				}, {
+					"id": 10,
+					"title": "10分区",
+					"imgurl": [
+						"images/area/area10_img1.jpg",
+						"images/area/area10_img2.jpg",
+						"images/area/area10_img3.jpg",
+						"images/area/area10_img4.jpg"
+					],
+					"audio": "audio/hmcs10.mp3",
+					"detail": "本片区为芦潮港社区（江山路以北），主要示范平原河网地区老城镇海绵城市建设"
+				}, {
+					"id": 11,
+					"title": "11分区",
+					"imgurl": [
+						"images/area/area11_img1.jpg",
+						"images/area/area11_img2.jpg",
+						"images/area/area11_img3.jpg"
+					],
+					"audio": "audio/hmcs10.mp3",
+					"detail": "本片区为芦潮港社区（江山路以北），主要示范平原河网地区老城镇海绵城市建设"
+				}
+			]
+		}, {
+			"id": 4,
+			"title": "海绵之芯",
+			"data": [
+				{
+					"title": "建筑与小区系统(绿色屋顶)",
+					"imgurl": "images/transparencyscreen/lswd.png",
+					"audio": "audio/lswd.mp3",
+					"detail": "建筑屋面和小区路面径流雨水应通过有组织的汇流与转输，经截污等预处理后引入绿地内的以雨水渗透、储存、调节等为主要功能的低影响开发设施。因空间限制等原因不能满足控制目标的建筑与小区，径流雨水还可通过城市雨水管渠系统引入城市绿地与广场内的低影响开发设施。低影响开发设施的选择应因地制宜、经济有效、方便易行，如结合小区绿地和景观水体优先设计生物滞留设施、渗井、湿塘和雨水湿地等。绿色屋顶：雨洪来临时，建筑屋顶产生的径流是导致城市内涝的重要原因之一。因此，将城市的建筑屋顶改造为绿色屋顶能有效缓解城市雨水径流压力。一方面，通过海绵城市结构来收集、储存雨水，并利用雨水进行浇灌，可以节省各种能耗；另一方面，绿色屋顶将形成良好的城市景观，提升城市的整体绿化率。绿色屋顶策略中，表面种植绿色植被，用以吸收雨洪期间多余的雨水径流，通过植物根系净化过滤，将雨水收集到雨水桶进行存储回用；绿色屋顶底层有轻质土层、防根系穿透层、排水层以及防水层等多层结构保护，同时能保护建筑表层，多样植物搭配的绿色植被层可以吸收建筑热量，缓解城市热岛效应。"
+				}, {
+					"title": "绿地系统(雨水花园)",
+					"imgurl": "images/transparencyscreen/yshy.png",
+					"audio": "audio/yshy.mp3",
+					"detail": "城市绿地、广场及周边区域径流雨水应通过有组织的汇流与转输，经截污等预处理后引入城市绿地内的以雨水渗透、储存、调节等为主要功能的低影响开发设施，消纳自身及周边区域径流雨水，并衔接区域内的雨水管渠系统和超标雨水径流排放系统，提高区域内涝防治能力。低影响开发设施的选择应因地制宜、经济有效、方便易行，如湿地公园和有景观水体的城市绿地与广场宜设计雨水湿地、湿塘等。"
+				}, {
+					"title": "道路与广场系统(机非分隔带)",
+					"imgurl": "images/transparencyscreen/jffgd.png",
+					"audio": "audio/jffgd.mp3",
+					"detail": "城市道路径流雨水应通过有组织的汇流与转输，经截污等预处理后引入道路红线内、外绿地内，并通过设置在绿地内的以雨水渗透、储存、调节等为主要功能的低影响开发设施进行处理。低影响开发设施的选择应因地制宜、经济有效、方便易行，如结合道路绿化带和道路红线外绿地优先设计下沉式绿地、生物滞留带、雨水湿地等。"
+				}, {
+					"id": 1,
+					"title": "水务系统(生态护岸)",
+					"imgurl": "images/transparencyscreen/stha.png",
+					"audio": "audio/stha.mp3",
+					"detail": "城市水系在城市排水、防涝、防洪及改善城市生态环境中发挥着重要作用，是城市水循环过程中的重要环节，湿塘、雨水湿地等低影响开发末端调蓄设施也是城市水系的重要组成部分，同时城市水系也是超标雨水径流排放系统的重要组成部分。"
+				}
+			]
+		}, {
+			"id": 5,
+			"title": "海绵之芯",
+			"data": [
+				{
+					"title": "",
+					"imgurl": "images/hmzx_gk1.png",
+					"audio": "",
+					"detail": ""
+				}, {
+					"title": "",
+					"imgurl": "images/hmzx_gk2.png",
+					"audio": "",
+					"detail": ""
+				}, {
+					"title": "",
+					"imgurl": "images/hmzx_gk3.png",
+					"audio": "",
+					"detail": ""
+				}, {
+					"title": "",
+					"imgurl": "images/hmzx_gk4.png",
+					"audio": "",
+					"detail": ""
+				}
+			]
+		}
+		, {
+			"id": 6,
+			"title": "海绵之美",
+			"data": [
+				{
+					"title": "",
+					"imgurl": "images/vr-1.png",
+					"audio": "",
+					"detail": ""
+				}, {
+					"title": "",
+					"imgurl": "images/vr-2.png",
+					"audio": "",
+					"detail": ""
+				}, {
+					"title": "",
+					"imgurl": "images/vr-3.png",
+					"audio": "",
+					"detail": ""
+				}, {
+					"title": "",
+					"imgurl": "images/vr-4.png",
+					"audio": "",
+					"detail": ""
+				}
+				, {
+					"title": "",
+					"imgurl": "images/vr-5.png",
+					"audio": "",
+					"detail": ""
+				}
+				, {
+					"title": "",
+					"imgurl": "images/vr-6.png",
+					"audio": "",
+					"detail": ""
+				}
+			]
+		}
+	]
+}

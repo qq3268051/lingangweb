@@ -1,0 +1,14 @@
+body,html{height: 100vh;display: block;}
+.wrapper {position: relative; height: 100vh;}
+.wrapper .bg{position: absolute; left: 0; }
+.bg img{width: 100%;}
+.nav{padding-top: 1.26rem;}
+.nav li{height: .56rem; margin-bottom: .52rem; overflow: hidden;}
+.nav li a{display: block; position: relative; width: 100%; height: 100%; box-sizing: border-box; color: #ffffff; padding: 0 .32rem;}
+.nav li a h3{font-size: .16rem; line-height: .22rem;}
+.nav li a p{font-size: .14rem; line-height: .2rem;}
+.nav li a em{position: absolute; left: .32rem; bottom: 0; height: .05rem; width: .3rem; background-color: #DE542E;}
+.nav li:nth-of-type(even) *{text-align: right;}
+.nav li:nth-of-type(even) em{left: auto; right: .32rem;}
+.nav li:nth-last-of-type(1){margin-bottom: 0;}
+

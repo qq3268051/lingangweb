@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="上海临港海绵城市展示中心" />
+		<meta name="description" content="上海临港海绵城市展示中心" />
+		<title>海棉之路</title>
+		<link rel="stylesheet" href="./css/commin.css">
+		<link rel="stylesheet" href="css/base.css" media="screen">
+		<link rel="stylesheet" href="css/detail.css" media="screen">
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<a class="goback" href="./vtour/tour.html?id=1"><img src="./images/arrow_l.png" alt=""></a>
+			</div>
+			<article class="w640">
+				<!--音乐-->
+				<div class="app-header">
+					<a href="javascript:void(0);" id="global-audio" class="global-audio ">
+						<!--<i class="icon-music"></i>-->
+						<span class="music-but">
+                        <i></i>
+                        <em>点击收听语音</em>
+                    </span>
+						<span class="musical fn-hide">
+                        <em><img src="images/musical_02.png" /></em>
+                        <em><img src="images/musical_02.png" /></em>
+                        <em><img src="images/musical_02.png" /></em>
+                        <em><img src="images/musical_02.png" /></em>
+                    </span>
+					</a>
+					<a href="javascript:void(0);" class="u-guideTop z-move"></a>
+					<p style="display: none;">
+						<audio id="audio" controls="controls" loop="1000">
+							<source src="" />
+						</audio>
+					</p>
+				</div>
+				<section class="container">
+					<div class="swiper-container">
+						<div class="swiper-wrapper"></div>
+					</div>
+				</section>
+			</article>
+		</div>
+		<script>
+			;
+			(function() {
+				function getUrlFn(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+					var r = window.location.search.substr(1).match(reg);
+					if(r != null) {
+						return unescape(r[2]);
+					} else {
+						return null;
+					}
+				}
+				var id = getUrlFn("id");
+				var mapId = getUrlFn("mapid") || "";
+				$.ajax({
+					type: "GET",
+					url: "./json/detail.json",
+					success: function(res) {
+						if(typeof res === "string"){
+						var res = JSON.parse(res);
+					}
+						var data = null;
+						for(var i = 0; i < res.data.length; i++) {
+							if(res.data[i].id == id) {
+								data = res.data[i];
+								break;
+							}
+						}
+
+						document.title = data.title;
+						$(".header h2").html(data.title);
+						$(".goback").attr("href",'./vtour/tour.html?id='+id);
+						var html = "";
+						var list = data.data;
+						if(mapId) {
+							var objstr = null;
+							for(var i = 0; i < list.length; i++) {
+								if(list[i].id == mapId) {
+									objstr = list[i];
+									break;
+								}
+							}
+							for(var i = 0; i < objstr.imgurl.length; i++) {
+								html += '<div class="swiper-slide box-align" name="mp3url">' +
+									'<img src="' + objstr.imgurl[i] + '" />' +
+									'<span class="prev-icon"></span>' +
+									'<span class="next-icon"></span>' +
+									'<div class="detail"><h2><p class="title">' + objstr.title + '</p></h2><div class="text"><input type="hidden" class="mp3" data-url="' + objstr.audio + '" /><p>' + objstr.detail + '</p></div></div>' +
+									'</div>'
+							}
+						} else {
+							for(var i = 0; i < list.length; i++) {
+								html += '<div class="swiper-slide box-align" name="mp3url">' +
+									'<img src="' + list[i].imgurl + '" />' +
+									'<span class="prev-icon"></span>' +
+									'<span class="next-icon"></span>' +
+									'<div class="detail">' +
+									' <h2>' +
+									'<p class="title">' + list[i].title + '</p>' +
+									'</h2>' +
+									'<div class="text">' +
+									'<input type="hidden" class="mp3" data-url="' + list[i].audio + '" />' +
+									'<p>' +
+									list[i].detail +
+									'</p>' +
+									'</div>' +
+									'</div>' +
+									'</div>'
+							}
+
+						}
+						$(".swiper-wrapper").html(html);
+						if(id == 5 || id == 6) {
+							$(".app-header").hide();
+							$(".detail").hide();
+						}
+						var mp3Url;
+						var obj = $(".swiper-slide");
+						var mp3Url = $(obj[0]).find('.mp3').attr('data-url');
+						var num = 0;
+						if(id == 1) {
+							mp3Url = $(obj[obj.length - 1]).find('.mp3').attr('data-url');
+							num = $(".swiper-slide").length - 1;
+						}
+
+						//alert(mp3Urls);
+						$('source').attr('src', mp3Url);
+						//播放音乐
+						var mediaObj = document.getElementById("audio");
+						mediaObj.pause();
+						var playing = 0;
+						//控制暂停或播放
+						$('#global-audio').click(function() {
+							//$('source').attr('src', mp3Url);
+							playingFn()
+						});
+
+						function playingFn(b) {
+							if(b) {
+								playing = 1;
+							}
+							if(playing == 1) {
+								mediaObj.pause();
+								playing = 0;
+								$('.global-audio').removeClass('z-play');
+								$('.global-audio').find('.musical').addClass('fn-hide');
+							} else {
+								mediaObj.src = mp3Url;
+								mediaObj.addEventListener('ended', function() {
+									setTimeout(function() {
+										if(index < 1) {
+											mediaObj.play();
+											index++
+										} else {
+											playing = 0;
+											$('.global-audio').removeClass('z-play');
+											$('.global-audio').find('.musical').addClass('fn-hide');
+										}
+									}, 500);
+								}, false);
+								mediaObj.play();
+								playing = 1;
+								$('.global-audio').addClass('z-play');
+								$('.global-audio').find('.musical').removeClass('fn-hide');
+							}
+						}
+						var mySwiper = new Swiper('.swiper-container', {
+							paginationClickable: true,
+							initialSlide: num,
+							onSlideChangeStart: function(swiper) {
+								var obj = $(".swiper-slide");
+								var num = swiper.activeIndex;
+								mp3Url = $(obj[num]).find('.mp3').attr('data-url');
+								$('source').attr('src', mp3Url);
+								playingFn(true);
+							}
+						});
+					}
+				})
+			})()
+		</script>
+
+	</body>
+
+</html>

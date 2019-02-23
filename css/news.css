@@ -1,0 +1,22 @@
+body,html{height: 100vh;display: block; font-family: "MicrosoftYaHei"}
+.wrapper {position: relative; height: 100vh; overflow: hidden;}
+.list_box{ box-sizing: border-box; height: 100vh; background: #000000; overflow: auto;}
+.list_box ul{padding: .15rem;}
+.list_box li{position: relative; width: 100%; margin-bottom: .15rem; overflow: hidden;}
+.list_box li .title{position: absolute; left: 0; top: 0; height: 100%; width: 1rem; background: rgba(74,144,226,.74);}
+.list_box li:nth-of-type(3n+1) .title{background: rgba(54,118,104,.74);}
+.list_box li:nth-of-type(3n+2) .title{background: rgba(97,64,142,.74);}
+.list_box li .title img{width: .75rem; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.list_box img{width: 100%;}
+.list_box .cont{padding-top: .1rem;}
+.list_box .cont a{display: flex;}
+.cont p{color: #ffffff; width: 2.19rem; font-size: .12rem; line-height: .19rem; margin-left: .1rem;}
+.cont span{display: block; width: .38rem; text-align: center; color: #ffffff; height: .38rem; background-color: rgba(74,144,226,.84);}
+.cont strong{display: block; font-size: .16rem; line-height: .2rem;}
+.cont em{font-style: normal; font-size: .14rem; display: block; line-height: .14rem;}
+.news_d_title{padding: .15rem; padding-top: 0;}
+.news_d_title img{width: 100%;}
+.news_d_title h2{text-align: center; padding: .15rem;}
+.newimg{max-height: 27vh; overflow: hidden;}
+.news_d_title .text{max-height: 59vh; overflow-y: auto;}
+.news_d_title .text p{text-indent: 2em; margin-top: .1rem; line-height: .2rem;}

@@ -1,0 +1,283 @@
+﻿<krpano version="1.19" title="Virtual Tour" onstart="startup();">
+	<!-- 小行星代码插入 -->
+	<view stereographic="true"
+	fisheye="1.0"
+	fov="155"
+	fovtype="VFOV"
+	fovmax="150"
+	hlookat="0"
+	vlookat="-120"
+	/>
+	<!-- 小行星代码插入 -->
+
+	<!-- 热点显示与隐藏属性 -->
+	<action name="set_hotspot_visible">for(set(i,0),i LT hotspot.count,inc(i),
+		if(%1 == false,
+		if(hotspot[get(i)].visible == true,
+		set(hotspot[get(i)].mark,true);set(hotspot[get(i)].visible,%1);
+		);
+		,
+		if(hotspot[get(i)].mark == true OR hotspot[get(i)].mark2 == true,
+		set(hotspot[get(i)].visible,%1);
+		);
+		);
+
+		);</action>
+	<!-- 热点显示与隐藏属性 -->
+	<include url="skin/vtourskin.xml" />
+	<include url="hot/hot.xml" />
+	<include url="loadingpercenttext.xml" />
+	<include url="loadingbar.xml" />
+	<!--相册s-->
+	<include url="images-gallery.xml" />
+	<plugin name="tplugin"
+        url="%CURRENTXML%/plugins/thumbnails.swf" 
+        alturl="%CURRENTXML%/plugins/thumbnails.js" 
+        preload="true" 
+        onresized="resizethumbs();showimage-onloaded();"
+    />
+     <!-- gallery N1 -->
+    <layer name="foto" type="container" keep="true"
+        parent="gallerythumbsbg"
+        align="center" x="0" y="0" width="100%" height="100%" 
+        onloaded="thumbnails.build(foto,gallery[foto].thumb);"
+        thumbsalign="center"
+        activeauto="false"
+        visible="false"
+    >
+        <thumbstyle name="default" onclick="showimage(foto,get(thumbindex));" />
+    </layer>
+    
+    <gallery name="foto" imgactive="0">
+       
+        <thumb name="t3" imgurl="images/1.png" url="images/1.png" />
+        <thumb name="t4" imgurl="images/2.png" url="images/2.png" />
+        <thumb name="t5" imgurl="images/3.png" url="images/3.png" />
+        <thumb name="t6" imgurl="images/4.png" url="images/4.png" />
+    </gallery>
+    <!--相册e-->
+	<action name="startup">if(startscene === null, copy(startscene,scene[0].name));
+		loadscene(get(startscene), null, MERGE|KEEPVIEW);
+		closetitle();
+		set_hotspot_visible(false);</action>
+	<action name="closetitle">tween(layer[aaa].x,-100,0.5);</action>
+	<action name="opentitle">tween(layer[aaa].x,0,0.5);</action>
+	<layer name="aaa" keep="true" type="container" bgcolor="0x000000" bgalpha="0.5" align="leftbottom" x="-100" y="0" width="100" height="48">
+		<layer name="db_title" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="0" y="0"
+		html=""
+		css="font-family:微软雅黑; font-size:17px; color:#ffffff;"
+		autowidth="true" autoheight="auto"
+		paddingright="20" roundedge="0"
+		background="false"
+		backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+		/>
+	</layer>
+	<layer name="bbb" keep="true" type="container" bgcolor="0x000000" bgalpha="0.5" align="righttop" x="0" y="0" width="48" height="48" >
+		<layer name="db_title2" keep="true" url="%SWFPATH%/plugins/textfield.swf"  align="center" x="0" y="0"
+		html="返回"
+		css="font-family:微软雅黑; font-size:17px; color:#ffffff;"
+		autowidth="true" autoheight="auto"
+		paddingright="20" roundedge="0"
+		background="false"
+		onclick="openurl('../simulationTour.html',_self);" 
+		backgroundcolor="0x000000" backgroundalpha="0.5" handcursor="false" enabled="true"
+		/>
+	</layer>
+	<scene name="scene_4" title="海绵之路" onstart="activatespot(spot2,180);" havevrimage="true" thumburl="panos/thumb/4.jpg" lat="" lng="" heading="">
+		<include url="map.xml" />
+		<view hlookat="186.464" vlookat="4.931" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/4.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/4/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/4/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/4/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/4/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/4/pano_%s.jpg" />
+		</image>
+		<display flash10="off" details="24" />
+
+		<!-- 小行星持续2秒后切换至正常视场-->
+		<events onloadcomplete="if(view.fisheye == 1,delayedcall(lp_1,2.0, normalview()));" onremovepano="ifnot(view.fisheye == 0,stopdelayedcall(lp_1));" name="littleplant"  keep="false" />
+		<action name="normalview">tween(view.hlookat, 186.464, 3.5, easeInOutQuad);
+			tween(view.vlookat, 4.931, 3.5, easeInOutQuad);
+			tween(view.fov,     70,  3.5, easeInOutQuad);
+			tween(view.fovmax,     70,  3.5, easeInOutQuad);
+			tween(view.fisheye, 0.0, 3.5, easeInOutQuad);
+			wait(2.7);
+			set(display.flash10, on);
+			set_hotspot_visible(true);
+			opentitle();
+			delayedcall(0.6,close_1(););</action>
+		<hotspot name="spot1" style="hotspot_style1" ath="-86.442" atv="13.390" linkedscene="scene_5" />
+		<hotspot name="spot2" style="hotspot_style6" ath="-173.220" atv="-0.006" text="四连屏六大考核指标" />
+		<hotspot name="spot3" style="hotspot_style6" ath="-173.263" atv="26.943" onclick="openurl('../Interaction.html',_self);" text="触摸桌六字方针" />
+		<hotspot name="spot4" style="hotspot_style1" ath="91.790" atv="19.859" linkedscene="scene_3" />
+
+	</scene>
+	<scene name="scene_1" title="广场" onstart="ifnot(view.fisheye == 1,set_hotspot_visible(false));" havevrimage="true"  thumburl="panos/thumb/1.jpg" lat="" lng="" heading="">
+		<view hlookat="522.318" vlookat="5.851" fovtype="MFOV" fov="100" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/1.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/1/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/1/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/1/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/1/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/1/pano_%s.jpg" />
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="hotspot_style1" ath="164.074" atv="9.762" linkedscene="scene_2" />
+	</scene>
+	<scene name="scene_2" title="到大门" onstart="" havevrimage="true" thumburl="panos/thumb/2.jpg" lat="" lng="" heading="">
+
+		<view hlookat="202.462" vlookat="17.172" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/2.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4161" tiledimageheight="4161">
+				<cube url="panos/2/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2081" tiledimageheight="2081">
+				<cube url="panos/2/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1042" tiledimageheight="1042">
+				<cube url="panos/2/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="521" tiledimageheight="521">
+				<cube url="panos/2/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/2/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style1" ath="-154.514" atv="22.639" linkedscene="scene_3" />
+
+	</scene>
+	<scene name="scene_3" title="海绵之源" onstart="activatespot(spot1,90);" havevrimage="true" thumburl="panos/thumb/3.jpg" lat="" lng="" heading="">
+
+		<view hlookat="92.284" vlookat="10.244" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/3.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/3/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/3/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/3/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/3/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/3/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot2" style="hotspot_style6" ath="112.209" atv="-6.814" text="海绵之源介绍" onclick="openurl('../details.html?id=1',_self);" />
+		<hotspot name="spot3" style="hotspot_style1" ath="-80.399" atv="12.033" linkedscene="scene_1" />
+		<hotspot name="spot4" style="hotspot_style1" ath="-19.730" atv="15.650" linkedscene="scene_4" />
+
+	</scene>
+	<scene name="scene_5" title="海绵之城" onstart="activatespot(spot3,100);" havevrimage="true" thumburl="panos/thumb/5.jpg" lat="" lng="" heading="">
+
+		<view hlookat="351.703" vlookat="23.426" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/5.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4151" tiledimageheight="4151">
+				<cube url="panos/5/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2077" tiledimageheight="2077">
+				<cube url="panos/5/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1040" tiledimageheight="1040">
+				<cube url="panos/5/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="521" tiledimageheight="521">
+				<cube url="panos/5/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/5/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style2" ath="141.561" atv="11.091" linkedscene="scene_6" />
+		<hotspot name="spot2" style="hotspot_style6" ath="-4.889" atv="7.045" text="水滴旅行相册" onclick="showgallery(foto);" />
+		<hotspot name="spot3" style="hotspot_style6" ath="3.278" atv="44.933" onclick="openurl('../sandtable.html',_self);" text="互动数字沙盘" />
+		<hotspot name="spot4" style="hotspot_style1" ath="-156.580" atv="17.861" linkedscene="scene_4" />
+
+	</scene>
+	<scene name="scene_6" title="海绵之芯" onstart="activatespot(spot4,-110);" havevrimage="true" thumburl="panos/thumb/7.jpg" lat="" lng="" heading="">
+
+		<view hlookat="172.261"  vlookat="6.218" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/7.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4161" tiledimageheight="4161">
+				<cube url="panos/7/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2081" tiledimageheight="2081">
+				<cube url="panos/7/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1042" tiledimageheight="1042">
+				<cube url="panos/7/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="521" tiledimageheight="521">
+				<cube url="panos/7/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/7/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style1" ath="-75.873" atv="27.225" linkedscene="scene_7" />
+		<hotspot name="spot2" style="hotspot_style3" ath="78.836" atv="8.477" linkedscene="scene_5" />
+		<hotspot name="spot3" style="hotspot_style6" ath="143.474" atv="-2.853" text="透明屏" onclick="openurl('../details.html?id=4',_self);" />
+		<hotspot name="spot4" style="hotspot_style6" ath="-4.654" atv="1.971" text="管控平台" onclick="openurl('../details.html?id=5',_self);" />
+
+	</scene>
+	<scene name="scene_7" title="海绵之美" onstart="activatespot(spot5,110);" havevrimage="true" thumburl="panos/thumb/6.jpg" lat="" lng="" heading="">
+
+		<view hlookat="892.747" vlookat="-3.802" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="100" limitview="range" vlookatmax="+65" vlookatmin="-90" />
+		<preview url="panos/preview/6.jpg" />
+		<image type="CUBE" multires="true" tilesize="375" if="!webvr.isenabled">
+			<level tiledimagewidth="4125" tiledimageheight="4125">
+				<cube url="panos/6/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2063" tiledimageheight="2063">
+				<cube url="panos/6/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1032" tiledimageheight="1032">
+				<cube url="panos/6/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="517" tiledimageheight="517">
+				<cube url="panos/6/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<image if="webvr.isenabled">
+			<cube url="panos/vr/6/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="hotspot_style1" ath="-22.458" atv="18.271" linkedscene="scene_6" />
+		<hotspot name="spot2" style="hotspot_style6" ath="174.862" atv="1.643" text="VR游戏" onclick="openurl('../details.html?id=6',_self);" />
+		<hotspot name="spot3" style="hotspot_style6" ath="16.232" atv="-1.553" text="互动游戏" />
+		<hotspot name="spot4" style="hotspot_style1" ath="77.991" atv="10.532" text="室外预留海绵设施技术和材料展示区" onclick="openurl('../exterior/tour.html?id=1',_self);"  />
+
+	</scene>
+
+</krpano>
