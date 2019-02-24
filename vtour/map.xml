@@ -1,9 +1,9 @@
 <krpano>
 
 	<!--地图按钮-->
-	<layer name="huxing"  url="%SWFPATH%/skin/close_Map.png" align="rightbottom" scale="1" zorder="7" alpha="1" x="0" y="0" keep="true" onclick="openmap();"></layer>
+	<!--<layer name="huxing"  url="%SWFPATH%/skin/close_Map.png" align="rightbottom" scale="1" zorder="7" alpha="1" x="0" y="0" keep="true" onclick="openmap();"></layer>-->
 	<!--地图按钮-->
-	<layer name="mapcontainer" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="rightbottom" x="-135" y="0" width="135" height="152"  parent="huxing">
+	<layer name="mapcontainer" keep="true" type="container" bgcolor="0x000000" bgalpha="0.0" align="rightbottom" x="0" y="0" width="135" height="152"  parent="huxing">
 		<layer name="map" url="%SWFPATH%/skin/huxing.png" align="left" x="0" y="0" width="135" height="152" handcursor="false" >
 			!-- 户型图雷达指针 -->
 			<plugin name="radar" url="%SWFPATH%/plugins/radar.swf" alturl="%SWFPATH%/plugins/radar.js" editmode="true" zorder="1" keep="true" heading="0"  parent="mapbar" align="lefttop" edge="center" x="0" y="0" linecolor="0"  fillcolor="0xFF9900" scale="0.5" />
