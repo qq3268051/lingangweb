@@ -161,3 +161,8 @@ body {
 	color: #FFFFFF;
 	background: rgba(0, 0, 0, .3);
 }
+.zxlist{padding: 15px;height: 100%; overflow-y: auto;}
+.zxlist li{position: relative; width: 100%; margin-bottom: .15rem;}
+.zxlist li img{width: 100%; display: block;}
+.zxlist li span{position: absolute; right: 0; bottom: .2rem; width: .93rem; height: .32rem; text-align: center; color: #FFFFFF; line-height: .32rem; font-size: .14rem; background: #4A90E2; border-top-left-radius: .32rem; border-bottom-left-radius: .32rem;}
+.zxlist span img{position: absolute; right: .06rem; width: .07rem; height: .12rem; top: 50%; transform: translate(0,-50%);}
